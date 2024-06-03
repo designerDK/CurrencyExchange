@@ -187,6 +187,7 @@ footer {
   & .to {
     position: absolute;
     z-index: 1;
+    top:147px;
   }
 
   & .currency-rate {
@@ -394,7 +395,7 @@ footer {
       position: absolute;
       z-index: 1;
       width: 34px;
-      top: 78px;
+      top: 100px !important;
     }
   
     & .currency-rate {
