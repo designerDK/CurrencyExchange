@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Currency Exchange Calculator & Foreign Exchange Rates</title>
+    <meta name="description" 
+    content="Check exchange rate information from around the world.">
+    <meta property="og:description" 
+    content="Check exchange rate information from around the world.">
+    <meta property="og:title" content="Currency Exchange Calculator & Foreign Exchange Rates">
+    <meta property="og:image" content="data/ogimage.png">
+    <meta property="og:url" content="">
+    <meta name="author" content="designerDK">
+    <meta name="keywords" content="Currency, Exchange, Calculator, Converter, Foreign Exchange, Exchange rate, global, Currency Exchange">
+    <link rel="icon" href="data/favicon.png">
+
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h1 class="title">Currency Exchange Calculator</h1>
+        <div class = "exchange-box">
+            <div class="data-container">
+                <div class="date" id="timeZone">2024-06-02T23:59:59Z</div>
+                <div class="data">
+                    <div id="curr1">USD</div>
+                    <div>/</div>
+                    <div id="curr2">USD</div>
+                    <div>Exchange Rate:</div>
+                    <div id="rate">1</div>
+                    <div id="curr3">USD</div>
+                </div>
+                
+            </div>
+            <div class="input-containers">
+                <div class="input-container">
+                
+                    <input class="input" type="text" id="from-input" placeholder="Base Currency" maxlength="16"
+                        autocomplete="off"
+                        onfocus="this.placeholder = ''"
+                        onblur="this.placeholder = 'Base Currency'"
+                        onkeyup="convert()"
+                        onkeypress="this.value=numberFormat(this.value, false, true, false)">
+                
+                
+                    <div class="dropdown-container">
+                        <div class="divider"></div>
+                        <div class="dropdown-btn" id="from-dropdown">
+                            <img id="from-button-img" src="data/flags/USD.png" alt="">
+                            <div class="dropdown-text" id="from-button-text">
+                                USD
+                            </div>
+                            <img id="arrow1" src="data/droparrow.svg" alt="">
+                        </div>
+                        
+                        <div class="dropdown-menucontainer" id="from-container">
+                            <div class="dropdown-menugroup">
+                                <div class="dropdown-menutitle">Frequently Used</div>
+                                <div class="dropdown-list" id="from-container-list1"></div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-menugroup">
+                                <div class="dropdown-menutitle">Alphabetical Order</div>
+                                <div class="dropdown-list" id="from-container-list2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                
+                    <input class="input" type="text" id="to-input" disabled="disabled" value="0.00">
+                
+                    <div class="dropdown-container">
+                        <div class="divider"></div>
+                        <div class="dropdown-btn" id="to-dropdown">
+                            <img id="to-button-img" src="data/flags/USD.png" alt="">
+                            <div class="dropdown-text" id="to-button-text">
+                                USD
+                            </div>
+                            <img id="arrow2" src="data/droparrow.svg" alt="">
+                        </div>
+                    
+                        <div class="dropdown-menucontainer" id="to-container">
+                            <div class="dropdown-menugroup">
+                                <div class="dropdown-menutitle">Popular</div>
+                                <div class="dropdown-list" id="to-container-list1"></div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-menugroup">
+                                <div class="dropdown-menutitle">Alphabetical order</div>
+                                <div class="dropdown-list" id="to-container-list2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img class="to" src="data/to.svg" alt="">
+            <div class="currency-rate">
+                <div>
+                    <div id="result-base">0</div>
+                    <div id="currency-base">USD</div>
+                </div>
+                <div>
+                    <div id="equal">=</div>
+                    <div id="result-quote">0.00</div>
+                    <div id="currency-quote">USD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="info">Copyright 2024. 'Designer DK' All rights reserved.</div>
+        <img src="data/dklogo.svg" alt="">
+        <div class="info">tupacalypse@naver.com</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
