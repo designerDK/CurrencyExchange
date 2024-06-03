@@ -326,7 +326,7 @@ footer {
     padding: 0px 16px 0px 16px;
   }
   .content{
-    padding: 95px 16px 0px 16px;
+    padding: 75px 16px 0px 16px;
     gap: 26px;
   }
   .exchange-box {
@@ -415,7 +415,7 @@ footer {
       z-index: 3;
       padding: 16px 16px 40px 16px;
       gap: 24px !important;
-      max-height: calc(100vh -  450px);
+      max-height: calc(100vh -  550px);
 
     
       & .dropdown-menugroup {
