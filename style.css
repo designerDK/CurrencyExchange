@@ -415,7 +415,7 @@ footer {
       z-index: 3;
       padding: 16px 16px 40px 16px;
       gap: 24px !important;
-      max-height: calc(100vh -  550px);
+      max-height: calc(100vh -  500px);
 
     
       & .dropdown-menugroup {
