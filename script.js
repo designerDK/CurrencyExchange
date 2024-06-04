@@ -47,15 +47,15 @@ function convert(){
 }
 
 // 타임존
-// $.ajax({
-//     method: "GET",
-//     url: "https://api.currencyapi.com/v3/latest?apikey=cur_live_HhdAsPb9LmIR64TZ0VlqFW0fQjUfKbwNXGv6Syky",
-//     data: { base_currency: fromCurrency, currencies : toCurrency }
+$.ajax({
+    method: "GET",
+    url: "https://api.currencyapi.com/v3/latest?apikey=cur_live_HhdAsPb9LmIR64TZ0VlqFW0fQjUfKbwNXGv6Syky",
+    data: { base_currency: fromCurrency, currencies : toCurrency }
 
-// }).done(function (msg) {
-//     let timeZone = msg.meta.last_updated_at;
-//     document.getElementById("timeZone").innerText = timeZone;
-// });
+}).done(function (msg) {
+    let timeZone = msg.meta.last_updated_at;
+    document.getElementById("timeZone").innerText = timeZone;
+});
 // 환율 메뉴 리스트 배열
 let nationTop=[
     {id: 0, unit: "USD", flag: "data/flags/USD.png"},
