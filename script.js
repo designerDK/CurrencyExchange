@@ -73,7 +73,7 @@ let nationTop=[
     {id: 12, unit: "BRL", flag: "data/flags/BRL.png"},
     {id: 13, unit: "CAD", flag: "data/flags/CAD.png"},
     {id: 14, unit: "MXN", flag: "data/flags/MXN.png"},
-    {id: 14, unit: "VND", flag: "data/flags/VND.png"}
+    {id: 15, unit: "VND", flag: "data/flags/VND.png"}
 ]
 
 let nation=[
